@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosDelAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,14 +74,14 @@
             // datosDelAlumnoToolStripMenuItem
             // 
             this.datosDelAlumnoToolStripMenuItem.Name = "datosDelAlumnoToolStripMenuItem";
-            this.datosDelAlumnoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.datosDelAlumnoToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.datosDelAlumnoToolStripMenuItem.Text = "Datos del Alumno";
             this.datosDelAlumnoToolStripMenuItem.Click += new System.EventHandler(this.datosDelAlumnoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // estructurasLinealesToolStripMenuItem
@@ -100,33 +99,33 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // SeparadorToolStripMenuItem
             // 
             this.SeparadorToolStripMenuItem.Name = "SeparadorToolStripMenuItem";
-            this.SeparadorToolStripMenuItem.Size = new System.Drawing.Size(221, 6);
+            this.SeparadorToolStripMenuItem.Size = new System.Drawing.Size(178, 6);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.listaDobleToolStripMenuItem.Text = "Lista Simple...";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // listaDobleToolStripMenuItem1
             // 
             this.listaDobleToolStripMenuItem1.Name = "listaDobleToolStripMenuItem1";
-            this.listaDobleToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.listaDobleToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.listaDobleToolStripMenuItem1.Text = "Lista Doble...";
             this.listaDobleToolStripMenuItem1.Click += new System.EventHandler(this.listaDobleToolStripMenuItem1_Click);
             // 
@@ -182,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::pryEstructuraDeDatos.Properties.Resources.fondo_tecnologia_abstracta_azul_degradado_23_2149213765;
             this.ClientSize = new System.Drawing.Size(986, 620);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

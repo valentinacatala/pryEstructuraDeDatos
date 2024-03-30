@@ -63,6 +63,16 @@ namespace pryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_tecnologia_abstracta_azul_degradado_23_2149213765 {
+            get {
+                object obj = ResourceManager.GetObject("fondo-tecnologia-abstracta-azul-degradado_23-2149213765", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_03_29_at_22_12_15 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-03-29 at 22.12.15", resourceCulture);
@@ -76,6 +86,16 @@ namespace pryEstructuraDeDatos.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_03_29_at_22_12_152 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-03-29 at 22.12.152", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_03_29_at_22_121 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-03-29 at 22.121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
