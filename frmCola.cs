@@ -63,5 +63,10 @@ namespace pryEstructuraDeDatos
                 lblTramite.Text = "";
             }
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

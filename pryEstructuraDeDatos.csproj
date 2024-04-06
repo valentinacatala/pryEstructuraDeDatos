@@ -139,5 +139,8 @@
   <ItemGroup>
     <None Include="Resources\cola_de_datos.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Pila.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
