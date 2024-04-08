@@ -45,8 +45,8 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstSimple = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbSimple = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(340, 12);
+            this.groupBox1.Location = new System.Drawing.Point(339, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 195);
             this.groupBox1.TabIndex = 5;
@@ -219,6 +219,15 @@
             this.lstSimple.Size = new System.Drawing.Size(184, 186);
             this.lstSimple.TabIndex = 0;
             // 
+            // cbSimple
+            // 
+            this.cbSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSimple.FormattingEnabled = true;
+            this.cbSimple.Location = new System.Drawing.Point(56, 114);
+            this.cbSimple.Name = "cbSimple";
+            this.cbSimple.Size = new System.Drawing.Size(121, 21);
+            this.cbSimple.TabIndex = 7;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources._1_3;
@@ -228,15 +237,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // cbSimple
-            // 
-            this.cbSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSimple.FormattingEnabled = true;
-            this.cbSimple.Location = new System.Drawing.Point(56, 114);
-            this.cbSimple.Name = "cbSimple";
-            this.cbSimple.Size = new System.Drawing.Size(121, 21);
-            this.cbSimple.TabIndex = 7;
             // 
             // frmListaSimple
             // 
