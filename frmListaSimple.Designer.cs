@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbSimple = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -45,7 +46,6 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstSimple = new System.Windows.Forms.ListBox();
-            this.cbSimple = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(339, 12);
+            this.groupBox1.Location = new System.Drawing.Point(364, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 195);
             this.groupBox1.TabIndex = 5;
@@ -78,6 +78,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -135,12 +136,22 @@
             this.groupBox2.Controls.Add(this.cbSimple);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(548, 12);
+            this.groupBox2.Location = new System.Drawing.Point(570, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 195);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elemento a eliminar";
+            // 
+            // cbSimple
+            // 
+            this.cbSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSimple.FormattingEnabled = true;
+            this.cbSimple.Location = new System.Drawing.Point(56, 114);
+            this.cbSimple.Name = "cbSimple";
+            this.cbSimple.Size = new System.Drawing.Size(121, 21);
+            this.cbSimple.TabIndex = 7;
+            this.cbSimple.SelectedIndexChanged += new System.EventHandler(this.cbSimple_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -150,6 +161,7 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label6
             // 
@@ -166,7 +178,7 @@
             this.groupBox3.Controls.Add(this.lstSimple);
             this.groupBox3.Location = new System.Drawing.Point(12, 216);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(736, 229);
+            this.groupBox3.Size = new System.Drawing.Size(758, 229);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado en una Lista y una Grilla";
@@ -180,11 +192,11 @@
             this.Codigo,
             this.Nombre,
             this.Tramite});
-            this.dgvSimple.Location = new System.Drawing.Point(214, 25);
+            this.dgvSimple.Location = new System.Drawing.Point(209, 25);
             this.dgvSimple.Name = "dgvSimple";
             this.dgvSimple.ReadOnly = true;
             this.dgvSimple.RowHeadersWidth = 51;
-            this.dgvSimple.Size = new System.Drawing.Size(512, 186);
+            this.dgvSimple.Size = new System.Drawing.Size(538, 186);
             this.dgvSimple.TabIndex = 1;
             // 
             // Codigo
@@ -219,21 +231,12 @@
             this.lstSimple.Size = new System.Drawing.Size(184, 186);
             this.lstSimple.TabIndex = 0;
             // 
-            // cbSimple
-            // 
-            this.cbSimple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSimple.FormattingEnabled = true;
-            this.cbSimple.Location = new System.Drawing.Point(56, 114);
-            this.cbSimple.Name = "cbSimple";
-            this.cbSimple.Size = new System.Drawing.Size(121, 21);
-            this.cbSimple.TabIndex = 7;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources._1_3;
             this.pictureBox1.Location = new System.Drawing.Point(10, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -242,15 +245,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 457);
+            this.ClientSize = new System.Drawing.Size(786, 457);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Lineal - Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
