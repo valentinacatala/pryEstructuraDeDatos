@@ -59,7 +59,7 @@ namespace pryEstructuraDeDatos
 
         private void cbSimple_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbSimple.Text=="")
+            if (cbSimple.SelectedIndex == -1)
             {
                 btnEliminar.Enabled = false;
             }
