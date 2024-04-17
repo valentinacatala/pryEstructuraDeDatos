@@ -113,6 +113,16 @@ namespace pryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Note_3_Blue_1920x1200 {
+            get {
+                object obj = ResourceManager.GetObject("Note-3-Blue-1920x1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_03_29_at_22_12_15 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-03-29 at 22.12.15", resourceCulture);
