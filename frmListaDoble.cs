@@ -65,21 +65,24 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (ListaDoble.Primero != null)
+            
+            btnEliminar.Enabled = false;
+            if (cbDoble.SelectedIndex != -1)
             {
-                Int32 x = Convert.ToInt32(cbDoble.Text);
-                ListaDoble.Eliminar(x);
-                ListaDoble.Recorrer(dgvDoble);
-                ListaDoble.Recorrer(lstDoble);
-                ListaDoble.Recorrer(cbDoble);
-                ListaDoble.Recorrer();
-                
+                if (ListaDoble.Primero != null)
+                {
+                    Int32 x = Convert.ToInt32(cbDoble.Text);
+                    ListaDoble.Eliminar(x);
+                    ListaDoble.Recorrer(dgvDoble);
+                    ListaDoble.Recorrer(lstDoble);
+                    ListaDoble.Recorrer(cbDoble);
+                    ListaDoble.Recorrer();
+                }
             }
             else
             {
-                MessageBox.Show("La lista esta vacia");
+                MessageBox.Show("Seleccionar el codigo");
             }
-            btnEliminar.Enabled = false;
         }
 
         private void cbDoble_SelectedIndexChanged(object sender, EventArgs e)

@@ -62,7 +62,7 @@
             // 
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources._0_F7Qnr7Zs_dobles_s_;
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(461, 238);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,9 +79,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(491, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(267, 240);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -91,7 +91,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(47, 188);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(161, 38);
             this.btnAgregar.TabIndex = 6;
@@ -102,7 +102,7 @@
             // txtTramite
             // 
             this.txtTramite.Location = new System.Drawing.Point(89, 139);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramite.Multiline = true;
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(159, 29);
@@ -111,7 +111,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(89, 89);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(159, 29);
@@ -120,7 +120,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(127, 38);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 29);
@@ -162,9 +162,9 @@
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(771, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(267, 138);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
@@ -175,7 +175,7 @@
             this.cbDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDoble.FormattingEnabled = true;
             this.cbDoble.Location = new System.Drawing.Point(73, 39);
-            this.cbDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbDoble.Margin = new System.Windows.Forms.Padding(4);
             this.cbDoble.Name = "cbDoble";
             this.cbDoble.Size = new System.Drawing.Size(160, 24);
             this.cbDoble.TabIndex = 7;
@@ -184,7 +184,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(52, 81);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(161, 38);
             this.btnEliminar.TabIndex = 6;
@@ -207,9 +207,9 @@
             this.groupBox3.Controls.Add(this.dgvDoble);
             this.groupBox3.Controls.Add(this.lstDoble);
             this.groupBox3.Location = new System.Drawing.Point(16, 273);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1021, 282);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
@@ -225,7 +225,7 @@
             this.Nombre,
             this.Tramite});
             this.dgvDoble.Location = new System.Drawing.Point(285, 31);
-            this.dgvDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDoble.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDoble.Name = "dgvDoble";
             this.dgvDoble.ReadOnly = true;
             this.dgvDoble.RowHeadersWidth = 51;
@@ -261,7 +261,7 @@
             this.lstDoble.FormattingEnabled = true;
             this.lstDoble.ItemHeight = 16;
             this.lstDoble.Location = new System.Drawing.Point(8, 31);
-            this.lstDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstDoble.Margin = new System.Windows.Forms.Padding(4);
             this.lstDoble.Name = "lstDoble";
             this.lstDoble.Size = new System.Drawing.Size(244, 228);
             this.lstDoble.TabIndex = 0;
@@ -271,9 +271,9 @@
             this.groupBox4.Controls.Add(this.rbDescendente);
             this.groupBox4.Controls.Add(this.rbAscendente);
             this.groupBox4.Location = new System.Drawing.Point(771, 160);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(267, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
@@ -283,19 +283,19 @@
             // 
             this.rbDescendente.AutoSize = true;
             this.rbDescendente.Location = new System.Drawing.Point(12, 54);
-            this.rbDescendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDescendente.Margin = new System.Windows.Forms.Padding(4);
             this.rbDescendente.Name = "rbDescendente";
             this.rbDescendente.Size = new System.Drawing.Size(109, 20);
             this.rbDescendente.TabIndex = 1;
-            this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
             // 
             // rbAscendente
             // 
             this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Checked = true;
             this.rbAscendente.Location = new System.Drawing.Point(12, 25);
-            this.rbAscendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAscendente.Margin = new System.Windows.Forms.Padding(4);
             this.rbAscendente.Name = "rbAscendente";
             this.rbAscendente.Size = new System.Drawing.Size(100, 20);
             this.rbAscendente.TabIndex = 0;

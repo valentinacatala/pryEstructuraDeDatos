@@ -101,6 +101,7 @@ namespace pryEstructuraDeDatos
         public void RecorrerDes(DataGridView Grilla)
         {
             clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
             Grilla.Rows.Add();
             while (aux!=null)
             {
@@ -139,7 +140,6 @@ namespace pryEstructuraDeDatos
                 aux = aux.Siguiente;
             }
         }
-
 
         public void RecorrerDes(ComboBox Combo)
         {
