@@ -116,5 +116,44 @@ namespace pryEstructuraDeDatos
                 PreOrden(R.Derecho, NodoPadre);
             }
         }
+
+        public void RecorrerPreOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrdenGrilla(Grilla, Raiz);
+        }
+        public void PreOrdenGrilla(DataGridView Grilla, clsNodo R)
+        {
+            Grilla.Rows.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                PreOrdenGrilla(Grilla, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrdenGrilla(Grilla, R.Derecho);
+            }
+        }
+
+        public void RecorrerPostOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrdenGrilla(Grilla, Raiz);
+        }
+        public void PostOrdenGrilla(DataGridView Grilla, clsNodo R)
+        {
+            
+            if (R.Izquierdo != null)
+            {
+                PreOrdenGrilla(Grilla, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrdenGrilla(Grilla, R.Derecho);
+            }
+            Grilla.Rows.Add(R.Codigo);
+        }
+
+
     }
 }

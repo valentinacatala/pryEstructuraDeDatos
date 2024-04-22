@@ -43,17 +43,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rbInOrden = new System.Windows.Forms.RadioButton();
-            this.rbPreOrden = new System.Windows.Forms.RadioButton();
-            this.rbPostOrden = new System.Windows.Forms.RadioButton();
-            this.dgvDoble = new System.Windows.Forms.DataGridView();
+            this.dgvArbol = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rbPostOrden = new System.Windows.Forms.RadioButton();
+            this.rbPreOrden = new System.Windows.Forms.RadioButton();
+            this.rbInOrden = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoble)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.SuspendLayout();
             // 
             // treeBinario
@@ -87,6 +87,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -189,7 +190,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgvDoble);
+            this.groupBox3.Controls.Add(this.dgvArbol);
             this.groupBox3.Controls.Add(this.rbPostOrden);
             this.groupBox3.Controls.Add(this.rbPreOrden);
             this.groupBox3.Controls.Add(this.rbInOrden);
@@ -200,54 +201,21 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado del Arbol";
             // 
-            // rbInOrden
+            // dgvArbol
             // 
-            this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(19, 42);
-            this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
-            this.rbInOrden.TabIndex = 0;
-            this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
-            this.rbInOrden.UseVisualStyleBackColor = true;
-            // 
-            // rbPreOrden
-            // 
-            this.rbPreOrden.AutoSize = true;
-            this.rbPreOrden.Location = new System.Drawing.Point(19, 94);
-            this.rbPreOrden.Name = "rbPreOrden";
-            this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
-            this.rbPreOrden.TabIndex = 1;
-            this.rbPreOrden.TabStop = true;
-            this.rbPreOrden.Text = "Pre-Orden";
-            this.rbPreOrden.UseVisualStyleBackColor = true;
-            // 
-            // rbPostOrden
-            // 
-            this.rbPostOrden.AutoSize = true;
-            this.rbPostOrden.Location = new System.Drawing.Point(19, 145);
-            this.rbPostOrden.Name = "rbPostOrden";
-            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.rbPostOrden.TabIndex = 2;
-            this.rbPostOrden.TabStop = true;
-            this.rbPostOrden.Text = "Post-Orden";
-            this.rbPostOrden.UseVisualStyleBackColor = true;
-            // 
-            // dgvDoble
-            // 
-            this.dgvDoble.AllowUserToAddRows = false;
-            this.dgvDoble.AllowUserToDeleteRows = false;
-            this.dgvDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvArbol.AllowUserToAddRows = false;
+            this.dgvArbol.AllowUserToDeleteRows = false;
+            this.dgvArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
             this.Tramite});
-            this.dgvDoble.Location = new System.Drawing.Point(135, 19);
-            this.dgvDoble.Name = "dgvDoble";
-            this.dgvDoble.ReadOnly = true;
-            this.dgvDoble.RowHeadersWidth = 51;
-            this.dgvDoble.Size = new System.Drawing.Size(489, 169);
-            this.dgvDoble.TabIndex = 15;
+            this.dgvArbol.Location = new System.Drawing.Point(135, 19);
+            this.dgvArbol.Name = "dgvArbol";
+            this.dgvArbol.ReadOnly = true;
+            this.dgvArbol.RowHeadersWidth = 51;
+            this.dgvArbol.Size = new System.Drawing.Size(489, 169);
+            this.dgvArbol.TabIndex = 15;
             // 
             // Codigo
             // 
@@ -273,6 +241,40 @@
             this.Tramite.ReadOnly = true;
             this.Tramite.Width = 125;
             // 
+            // rbPostOrden
+            // 
+            this.rbPostOrden.AutoSize = true;
+            this.rbPostOrden.Location = new System.Drawing.Point(19, 145);
+            this.rbPostOrden.Name = "rbPostOrden";
+            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rbPostOrden.TabIndex = 2;
+            this.rbPostOrden.TabStop = true;
+            this.rbPostOrden.Text = "Post-Orden";
+            this.rbPostOrden.UseVisualStyleBackColor = true;
+            // 
+            // rbPreOrden
+            // 
+            this.rbPreOrden.AutoSize = true;
+            this.rbPreOrden.Location = new System.Drawing.Point(19, 94);
+            this.rbPreOrden.Name = "rbPreOrden";
+            this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.rbPreOrden.TabIndex = 1;
+            this.rbPreOrden.TabStop = true;
+            this.rbPreOrden.Text = "Pre-Orden";
+            this.rbPreOrden.UseVisualStyleBackColor = true;
+            // 
+            // rbInOrden
+            // 
+            this.rbInOrden.AutoSize = true;
+            this.rbInOrden.Checked = true;
+            this.rbInOrden.Location = new System.Drawing.Point(19, 42);
+            this.rbInOrden.Name = "rbInOrden";
+            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rbInOrden.TabIndex = 0;
+            this.rbInOrden.TabStop = true;
+            this.rbInOrden.Text = "In-Orden";
+            this.rbInOrden.UseVisualStyleBackColor = true;
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,13 +287,14 @@
             this.Controls.Add(this.treeBinario);
             this.Name = "frmArbolBinario";
             this.Text = "Estructuras Ramificadas - ArbolBinario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoble)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,7 +319,7 @@
         private System.Windows.Forms.RadioButton rbPostOrden;
         private System.Windows.Forms.RadioButton rbPreOrden;
         private System.Windows.Forms.RadioButton rbInOrden;
-        private System.Windows.Forms.DataGridView dgvDoble;
+        private System.Windows.Forms.DataGridView dgvArbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;

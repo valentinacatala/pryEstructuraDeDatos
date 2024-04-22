@@ -51,5 +51,11 @@ namespace pryEstructuraDeDatos
             frmListaDoble frmListaDoble = new frmListaDoble();
             frmListaDoble.Show();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario frmArbolBinario = new frmArbolBinario();
+            frmArbolBinario.Show();
+        }
     }
 }
