@@ -57,6 +57,8 @@ namespace pryEstructuraDeDatos
             }
         }
 
+        //IN ORDEN 
+
         public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -69,13 +71,12 @@ namespace pryEstructuraDeDatos
                 InOrderAsc(Grilla, R.Izquierdo);
             }
 
-            Grilla.Rows.Add(R.Codigo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre,R.Tramite);
             if (R.Derecho != null)
             {
                 InOrderAsc(Grilla, R.Derecho);
             }
         }
-
         public void Recorrer(ComboBox Lista)
         {
             Lista.Items.Clear();
@@ -95,6 +96,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
+        //PRE ORDEN
         public void Recorrer(TreeView tree)
         {
             tree.Nodes.Clear();
@@ -124,7 +126,7 @@ namespace pryEstructuraDeDatos
         }
         public void PreOrdenGrilla(DataGridView Grilla, clsNodo R)
         {
-            Grilla.Rows.Add(R.Codigo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
             if (R.Izquierdo != null)
             {
                 PreOrdenGrilla(Grilla, R.Izquierdo);
@@ -135,6 +137,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
+        //POST ORDEN
         public void RecorrerPostOrden(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -151,9 +154,9 @@ namespace pryEstructuraDeDatos
             {
                 PreOrdenGrilla(Grilla, R.Derecho);
             }
-            Grilla.Rows.Add(R.Codigo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
-
+        
     }
 }

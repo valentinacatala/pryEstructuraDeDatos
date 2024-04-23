@@ -37,29 +37,19 @@ namespace pryEstructuraDeDatos
                 ObjNodo.Tramite = txtTramite.Text;
                 ListaDoble.Agregar(ObjNodo);
 
-                if (rbAscendente.Checked)
-                {
-                    ListaDoble.Recorrer(dgvDoble);
-                    ListaDoble.Recorrer(lstDoble);
-                    ListaDoble.Recorrer(cbDoble);
-                    ListaDoble.Recorrer();
-                }
-                else if (rbDescendente.Checked)
-                {
-                    ListaDoble.RecorrerDes(dgvDoble);
-                    ListaDoble.RecorrerDes(lstDoble);
-                    ListaDoble.RecorrerDes(cbDoble);
-                    ListaDoble.RecorrerDes();
-                }
+                ListaDoble.Recorrer(dgvDoble);
+                ListaDoble.Recorrer(lstDoble);
+                ListaDoble.Recorrer(cbDoble);
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
             }
             else
             {
                 MessageBox.Show("El codigo ingresado no es valido");
             }
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
 
         }
 
@@ -95,6 +85,22 @@ namespace pryEstructuraDeDatos
             {
                 btnEliminar.Enabled = true;
             }
+        }
+
+        private void rbAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ListaDoble.Recorrer(dgvDoble);
+            ListaDoble.Recorrer(lstDoble);
+            ListaDoble.Recorrer(cbDoble);
+            ListaDoble.Recorrer();
+        }
+
+        private void rbDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ListaDoble.RecorrerDes(dgvDoble);
+            ListaDoble.RecorrerDes(lstDoble);
+            ListaDoble.RecorrerDes(cbDoble);
+            ListaDoble.RecorrerDes();
         }
     }
 }

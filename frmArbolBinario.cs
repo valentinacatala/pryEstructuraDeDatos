@@ -32,28 +32,38 @@ namespace pryEstructuraDeDatos
                 ObjNodo.Tramite = txtTramite.Text;
                 ArbolBinario.Agregar(ObjNodo);
 
-                if (rbInOrden.Checked)
-                {
-                    ArbolBinario.Recorrer(dgvArbol); 
-                }
-                else if (rbPreOrden.Checked)
-                {
-                    ArbolBinario.RecorrerPreOrden(dgvArbol);
-                    ArbolBinario.Recorrer(treeBinario);
-                }
-                else if (rbPostOrden.Checked)
-                {
-                    ArbolBinario.RecorrerPostOrden(dgvArbol);
-                }
+                ArbolBinario.Recorrer(dgvArbol);
+                ArbolBinario.Recorrer(treeBinario);
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
             }
             else
             {
                 MessageBox.Show("El codigo ingresado no es valido");
             }
+            
+        }
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+        private void rbInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+            ArbolBinario.Recorrer(dgvArbol);
+            ArbolBinario.Recorrer(cbArbol);
+        }
+
+        private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            ArbolBinario.RecorrerPreOrden(dgvArbol);
+            ArbolBinario.Recorrer(treeBinario);
+            ArbolBinario.Recorrer(cbArbol);
+        }
+
+        private void rbPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            ArbolBinario.RecorrerPostOrden(dgvArbol);
+            ArbolBinario.Recorrer(cbArbol);
         }
     }
 }
