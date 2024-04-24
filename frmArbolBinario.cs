@@ -79,8 +79,8 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
-            
+           
+           // ArbolBinario.Eliminar();
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
