@@ -97,9 +97,9 @@ namespace pryEstructuraDeDatos
             }
         }
 
-        public void Recorrer()
+        public void RecorrerInOrden()
         {
-            StreamWriter AD = new StreamWriter("ArbolBinario.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrden.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Codigo;Nombre;Tramite");
             RecorrerInOrdenIO(Raiz, AD);
@@ -155,6 +155,24 @@ namespace pryEstructuraDeDatos
                 InOrderDesc(Lst, R.Izquierdo);
             }
         }
+        public void RecorrerDesc()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrdenDesc.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerInOrdenDescIO(Raiz, AD);
+            AD.Close();
+        }
+
+        private void RecorrerInOrdenDescIO(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                RecorrerInOrdenDescIO(R.Derecho, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                RecorrerInOrdenDescIO(R.Izquierdo, writer);
+            }
+        }
 
         //PRE ORDEN
         public void Recorrer(TreeView tree)
@@ -196,6 +214,24 @@ namespace pryEstructuraDeDatos
                 PreOrdenGrilla(Grilla, R.Derecho);
             }
         }
+        public void RecorrerPreOrden()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPreOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerPreOrdenIO(Raiz, AD);
+            AD.Close();
+        }
+
+        private void RecorrerPreOrdenIO(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                RecorrerPreOrdenIO(R.Izquierdo, writer);
+                RecorrerPreOrdenIO(R.Derecho, writer);
+            }
+        }
 
         //POST ORDEN
         public void RecorrerPostOrden(DataGridView Grilla)
@@ -217,6 +253,23 @@ namespace pryEstructuraDeDatos
             Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
-        
+        public void RecorrerPostOrden()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPostOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerPostOrdenIO(Raiz, AD);
+            AD.Close();
+        }
+
+        private void RecorrerPostOrdenIO(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                RecorrerPostOrdenIO(R.Izquierdo, writer);
+                RecorrerPostOrdenIO(R.Derecho, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+            }
+        }
     }
 }
