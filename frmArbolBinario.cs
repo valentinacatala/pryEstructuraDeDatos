@@ -76,5 +76,16 @@ namespace pryEstructuraDeDatos
             ArbolBinario.RecorrerDesc(cbArbol);
             ArbolBinario.RecorrerDesc();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            ArbolBinario.Equilibrar();
+        }
     }
 }
