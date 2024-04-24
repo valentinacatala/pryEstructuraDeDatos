@@ -57,7 +57,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
-        //IN ORDEN 
+        //IN ORDEN ASCENDENTE
 
         public void Recorrer(DataGridView Grilla)
         {
@@ -77,6 +77,7 @@ namespace pryEstructuraDeDatos
                 InOrderAsc(Grilla, R.Derecho);
             }
         }
+
         public void Recorrer(ComboBox Lista)
         {
             Lista.Items.Clear();
@@ -93,6 +94,65 @@ namespace pryEstructuraDeDatos
             if (R.Derecho != null)
             {
                 InOrderAsc(Lst, R.Derecho);
+            }
+        }
+
+        public void Recorrer()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinario.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerInOrdenIO(Raiz, AD);
+            AD.Close(); 
+        }
+
+        private void RecorrerInOrdenIO(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                RecorrerInOrdenIO(R.Izquierdo, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                RecorrerInOrdenIO(R.Derecho, writer);
+            }
+        }
+
+
+        //IN ORDEN DESCENDENTE
+
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrderDesc(Grilla, Raiz);
+        }
+        public void InOrderDesc(DataGridView Grilla, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrderDesc(Grilla, R.Derecho);
+            }
+
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null)
+            {
+                InOrderDesc(Grilla, R.Izquierdo);
+            }
+        }
+        public void RecorrerDesc(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrderDesc(Lista, Raiz);
+        }
+        public void InOrderDesc(ComboBox Lst, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrderDesc(Lst, R.Derecho);
+            }
+
+            Lst.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                InOrderDesc(Lst, R.Izquierdo);
             }
         }
 

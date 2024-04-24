@@ -49,7 +49,8 @@
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rbPostOrden = new System.Windows.Forms.RadioButton();
             this.rbPreOrden = new System.Windows.Forms.RadioButton();
-            this.rbInOrden = new System.Windows.Forms.RadioButton();
+            this.rbInOrdenAsc = new System.Windows.Forms.RadioButton();
+            this.rbInOrdenDesc = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -206,10 +207,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rbInOrdenDesc);
             this.groupBox3.Controls.Add(this.dgvArbol);
             this.groupBox3.Controls.Add(this.rbPostOrden);
             this.groupBox3.Controls.Add(this.rbPreOrden);
-            this.groupBox3.Controls.Add(this.rbInOrden);
+            this.groupBox3.Controls.Add(this.rbInOrdenAsc);
             this.groupBox3.Location = new System.Drawing.Point(16, 304);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
@@ -228,12 +230,12 @@
             this.Codigo,
             this.Nombre,
             this.Tramite});
-            this.dgvArbol.Location = new System.Drawing.Point(180, 23);
+            this.dgvArbol.Location = new System.Drawing.Point(238, 23);
             this.dgvArbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvArbol.Name = "dgvArbol";
             this.dgvArbol.ReadOnly = true;
             this.dgvArbol.RowHeadersWidth = 51;
-            this.dgvArbol.Size = new System.Drawing.Size(652, 208);
+            this.dgvArbol.Size = new System.Drawing.Size(594, 208);
             this.dgvArbol.TabIndex = 15;
             // 
             // Codigo
@@ -268,7 +270,6 @@
             this.rbPostOrden.Name = "rbPostOrden";
             this.rbPostOrden.Size = new System.Drawing.Size(96, 20);
             this.rbPostOrden.TabIndex = 2;
-            this.rbPostOrden.TabStop = true;
             this.rbPostOrden.Text = "Post-Orden";
             this.rbPostOrden.UseVisualStyleBackColor = true;
             this.rbPostOrden.CheckedChanged += new System.EventHandler(this.rbPostOrden_CheckedChanged);
@@ -276,29 +277,40 @@
             // rbPreOrden
             // 
             this.rbPreOrden.AutoSize = true;
-            this.rbPreOrden.Location = new System.Drawing.Point(25, 116);
+            this.rbPreOrden.Location = new System.Drawing.Point(25, 129);
             this.rbPreOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbPreOrden.Name = "rbPreOrden";
             this.rbPreOrden.Size = new System.Drawing.Size(90, 20);
             this.rbPreOrden.TabIndex = 1;
-            this.rbPreOrden.TabStop = true;
             this.rbPreOrden.Text = "Pre-Orden";
             this.rbPreOrden.UseVisualStyleBackColor = true;
             this.rbPreOrden.CheckedChanged += new System.EventHandler(this.rbPreOrden_CheckedChanged);
             // 
-            // rbInOrden
+            // rbInOrdenAsc
             // 
-            this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Checked = true;
-            this.rbInOrden.Location = new System.Drawing.Point(25, 52);
-            this.rbInOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(79, 20);
-            this.rbInOrden.TabIndex = 0;
-            this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
-            this.rbInOrden.UseVisualStyleBackColor = true;
-            this.rbInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
+            this.rbInOrdenAsc.AutoSize = true;
+            this.rbInOrdenAsc.Checked = true;
+            this.rbInOrdenAsc.Location = new System.Drawing.Point(25, 52);
+            this.rbInOrdenAsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbInOrdenAsc.Name = "rbInOrdenAsc";
+            this.rbInOrdenAsc.Size = new System.Drawing.Size(154, 20);
+            this.rbInOrdenAsc.TabIndex = 0;
+            this.rbInOrdenAsc.TabStop = true;
+            this.rbInOrdenAsc.Text = "In-Orden Ascendente";
+            this.rbInOrdenAsc.UseVisualStyleBackColor = true;
+            this.rbInOrdenAsc.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
+            // 
+            // rbInOrdenDesc
+            // 
+            this.rbInOrdenDesc.AutoSize = true;
+            this.rbInOrdenDesc.Location = new System.Drawing.Point(25, 91);
+            this.rbInOrdenDesc.Margin = new System.Windows.Forms.Padding(4);
+            this.rbInOrdenDesc.Name = "rbInOrdenDesc";
+            this.rbInOrdenDesc.Size = new System.Drawing.Size(163, 20);
+            this.rbInOrdenDesc.TabIndex = 16;
+            this.rbInOrdenDesc.Text = "In-Orden Descendente";
+            this.rbInOrdenDesc.UseVisualStyleBackColor = true;
+            this.rbInOrdenDesc.CheckedChanged += new System.EventHandler(this.rbInOrdenDesc_CheckedChanged);
             // 
             // frmArbolBinario
             // 
@@ -344,10 +356,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rbPostOrden;
         private System.Windows.Forms.RadioButton rbPreOrden;
-        private System.Windows.Forms.RadioButton rbInOrden;
+        private System.Windows.Forms.RadioButton rbInOrdenAsc;
         private System.Windows.Forms.DataGridView dgvArbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
+        private System.Windows.Forms.RadioButton rbInOrdenDesc;
     }
 }

@@ -51,6 +51,8 @@ namespace pryEstructuraDeDatos
 
             ArbolBinario.Recorrer(dgvArbol);
             ArbolBinario.Recorrer(cbArbol);
+            ArbolBinario.Recorrer();
+           
         }
 
         private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
@@ -64,6 +66,12 @@ namespace pryEstructuraDeDatos
         {
             ArbolBinario.RecorrerPostOrden(dgvArbol);
             ArbolBinario.Recorrer(cbArbol);
+        }
+
+        private void rbInOrdenDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            ArbolBinario.RecorrerDesc(dgvArbol);
+            ArbolBinario.RecorrerDesc(cbArbol);
         }
     }
 }
