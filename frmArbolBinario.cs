@@ -79,8 +79,10 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
-           // ArbolBinario.Eliminar();
+            
+            Int32 codigoAEliminar = Convert.ToInt32(txtCodigo.Text);
+            ArbolBinario.Eliminar(codigoAEliminar);
+            
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
