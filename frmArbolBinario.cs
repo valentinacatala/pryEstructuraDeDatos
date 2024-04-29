@@ -34,6 +34,7 @@ namespace pryEstructuraDeDatos
 
                 ArbolBinario.Recorrer(dgvArbol);
                 ArbolBinario.Recorrer(treeBinario);
+                ArbolBinario.Recorrer(cbArbol);
 
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
@@ -79,15 +80,29 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (cbArbol.SelectedIndex != -1)
+            {
+                Int32 codigoAEliminar = Convert.ToInt32(cbArbol.Text);
+                ArbolBinario.Eliminar(codigoAEliminar);
+
+                ArbolBinario.Recorrer(dgvArbol);
+                ArbolBinario.Recorrer(treeBinario);
+                ArbolBinario.Recorrer(cbArbol);
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar un codigo para eliminar");
+            }
             
-            Int32 codigoAEliminar = Convert.ToInt32(txtCodigo.Text);
-            ArbolBinario.Eliminar(codigoAEliminar);
             
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
             ArbolBinario.Equilibrar();
+            ArbolBinario.Recorrer(dgvArbol);
+            ArbolBinario.Recorrer(treeBinario);
+            ArbolBinario.Recorrer(cbArbol);
         }
     }
 }
