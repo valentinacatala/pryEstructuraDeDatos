@@ -65,13 +65,13 @@ namespace pryEstructuraDeDatos
                 clsNodo aux = Primero;
                 clsNodo ant = Primero;
 
-                while (Cod != aux.Codigo)
+                while (aux.Codigo != Cod)
                 {
                     ant = aux;
                     aux = aux.Siguiente;
                 }
 
-                ant.Siguiente = ant.Siguiente;
+                ant.Siguiente = aux.Siguiente;
             }
         }
 

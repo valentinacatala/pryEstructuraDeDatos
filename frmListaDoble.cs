@@ -55,7 +55,6 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
             btnEliminar.Enabled = false;
             if (cbDoble.SelectedIndex != -1)
             {
@@ -73,6 +72,7 @@ namespace pryEstructuraDeDatos
             {
                 MessageBox.Show("Seleccionar el codigo");
             }
+            
         }
 
         private void cbDoble_SelectedIndexChanged(object sender, EventArgs e)

@@ -12,6 +12,8 @@ namespace pryEstructuraDeDatos
 {
     public partial class frmArbolBinario : Form
     {
+        //https://forms.gle/4ucTDDjEfpdCFKqi8
+
         public frmArbolBinario()
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace pryEstructuraDeDatos
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
+
+                rbInOrdenAsc.Checked = true;
             }
             else
             {
@@ -80,6 +84,7 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            btnEliminar.Enabled = false;
             if (cbArbol.SelectedIndex != -1)
             {
                 Int32 codigoAEliminar = Convert.ToInt32(cbArbol.Text);
@@ -94,7 +99,6 @@ namespace pryEstructuraDeDatos
                 MessageBox.Show("Seleccionar un codigo para eliminar");
             }
             
-            
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
@@ -103,6 +107,18 @@ namespace pryEstructuraDeDatos
             ArbolBinario.Recorrer(dgvArbol);
             ArbolBinario.Recorrer(treeBinario);
             ArbolBinario.Recorrer(cbArbol);
+        }
+
+        private void cbArbol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbArbol.SelectedIndex == cbArbol.Items.Count - 1)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
         }
     }
 }

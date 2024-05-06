@@ -59,6 +59,7 @@
             // 
             // treeBinario
             // 
+            this.treeBinario.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.treeBinario.Location = new System.Drawing.Point(12, 12);
             this.treeBinario.Name = "treeBinario";
             this.treeBinario.Size = new System.Drawing.Size(223, 216);
@@ -73,7 +74,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(241, 12);
+            this.groupBox1.Location = new System.Drawing.Point(242, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 216);
             this.groupBox1.TabIndex = 7;
@@ -161,6 +162,7 @@
             this.cbArbol.Name = "cbArbol";
             this.cbArbol.Size = new System.Drawing.Size(121, 21);
             this.cbArbol.TabIndex = 7;
+            this.cbArbol.SelectedIndexChanged += new System.EventHandler(this.cbArbol_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
