@@ -30,17 +30,27 @@ namespace pryEstructuraDeDatos
         clsCola FilaDePersonas = new clsCola();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo ObjNodo = new clsNodo();
-            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            ObjNodo.Nombre = txtNombre.Text;
-            ObjNodo.Tramite = txtTramite.Text;
-            FilaDePersonas.Agregar(ObjNodo);
-            FilaDePersonas.Recorrer(dgvCola);
-            FilaDePersonas.Recorrer(lstCola);
-            FilaDePersonas.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                clsNodo ObjNodo = new clsNodo();
+                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                ObjNodo.Nombre = txtNombre.Text;
+                ObjNodo.Tramite = txtTramite.Text;
+
+                FilaDePersonas.Agregar(ObjNodo);
+                FilaDePersonas.Recorrer(dgvCola);
+                FilaDePersonas.Recorrer(lstCola);
+                FilaDePersonas.Recorrer();
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("El codigo ingresado no es valido");
+            }
+            
 
         }
 

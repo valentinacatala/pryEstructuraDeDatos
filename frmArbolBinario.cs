@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace pryEstructuraDeDatos
 {
     public partial class frmArbolBinario : Form
     {
-        //https://forms.gle/4ucTDDjEfpdCFKqi8
+        
 
         public frmArbolBinario()
         {
@@ -103,10 +104,18 @@ namespace pryEstructuraDeDatos
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            ArbolBinario.Equilibrar();
-            ArbolBinario.Recorrer(dgvArbol);
-            ArbolBinario.Recorrer(treeBinario);
-            ArbolBinario.Recorrer(cbArbol);
+            if (ArbolBinario.Raiz==null)
+            {
+                MessageBox.Show("No hay ningun codigo ingresado");
+            }
+            else
+            {
+                ArbolBinario.Equilibrar();
+                ArbolBinario.Recorrer(dgvArbol);
+                ArbolBinario.Recorrer(treeBinario);
+                ArbolBinario.Recorrer(cbArbol);
+            }
+            
         }
 
         private void cbArbol_SelectedIndexChanged(object sender, EventArgs e)

@@ -25,18 +25,28 @@ namespace pryEstructuraDeDatos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo ObjNodo = new clsNodo();
-            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            ObjNodo.Nombre = txtNombre.Text;
-            ObjNodo.Tramite = txtTramite.Text;
-            ListaSimple.Agregar(ObjNodo);
-            ListaSimple.Recorrer(dgvSimple);
-            ListaSimple.Recorrer(lstSimple);
-            ListaSimple.Recorrer(cbSimple);
-            ListaSimple.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                clsNodo ObjNodo = new clsNodo();
+                ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                ObjNodo.Nombre = txtNombre.Text;
+                ObjNodo.Tramite = txtTramite.Text;
+
+                ListaSimple.Agregar(ObjNodo);
+                ListaSimple.Recorrer(dgvSimple);
+                ListaSimple.Recorrer(lstSimple);
+                ListaSimple.Recorrer(cbSimple);
+                ListaSimple.Recorrer();
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("El codigo ingresado no es valido");
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
