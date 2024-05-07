@@ -50,7 +50,6 @@ namespace pryEstructuraDeDatos
                 MessageBox.Show("El codigo ingresado no es valido");
             }
 
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
