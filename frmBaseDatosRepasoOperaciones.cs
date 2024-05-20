@@ -16,5 +16,10 @@ namespace pryEstructuraDeDatos
         {
             InitializeComponent();
         }
+
+        private void frmBaseDatosRepasoOperaciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
