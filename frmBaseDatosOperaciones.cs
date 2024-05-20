@@ -64,8 +64,8 @@ namespace pryEstructuraDeDatos
         private void btnSeleccionMultiatributo_Click(object sender, EventArgs e)
         {
             string varSQL = "SELECT * FROM Libro " +
-                "WHERE IdAutor=2 " +
-                "OR IdAutor=3";
+                "WHERE IdAutor=3 " +
+                "AND IdPais=3";
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
         }
 

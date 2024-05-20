@@ -21,5 +21,21 @@ namespace pryEstructuraDeDatos
         {
 
         }
+        
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            string varSQL = "SELECT * FROM Libro ";
+            switch (cbOperaciones.SelectedIndex)
+            {
+                case 0:
+                    lblOperacion.Text=cbOperaciones.Text + ": " +
+                        "Paises que no tienen libros";
+                    varSQL = "";
+                break;
+                    
+            }
+        }
     }
 }
