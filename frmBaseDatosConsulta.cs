@@ -22,5 +22,10 @@ namespace pryEstructuraDeDatos
             clsBaseDatos objBaseDatos = new clsBaseDatos();
             objBaseDatos.Listar(dgvConsulta, txtConsulta.Text);
         }
+
+        private void frmBaseDatosConsulta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
