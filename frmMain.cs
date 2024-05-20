@@ -74,5 +74,11 @@ namespace pryEstructuraDeDatos
             frmBaseDatosConsulta frmBaseDatosConsulta = new frmBaseDatosConsulta();
             frmBaseDatosConsulta.Show();
         }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosRepasoOperaciones frmBaseDatosRepasoOperaciones = new frmBaseDatosRepasoOperaciones();
+            frmBaseDatosRepasoOperaciones.Show();
+        }
     }
 }
