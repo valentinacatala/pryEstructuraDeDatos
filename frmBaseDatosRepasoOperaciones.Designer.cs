@@ -39,28 +39,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 13);
+            this.label1.Size = new System.Drawing.Size(265, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Operaciones a realizar en la base de datos";
             // 
             // cbOperaciones
             // 
+            this.cbOperaciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOperaciones.FormattingEnabled = true;
-            this.cbOperaciones.Location = new System.Drawing.Point(220, 20);
-            this.cbOperaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.cbOperaciones.Items.AddRange(new object[] {
+            "Unión de Autores",
+            "Unión de Paises",
+            "Unión de Idiomas",
+            "Diferencia de Idiomas",
+            "Diferencia de Autores",
+            "Intersección de Idiomas",
+            "Intersección de Paises",
+            "Selección Simple de Autores",
+            "Selección Simple de Cantidad",
+            "Selección Multiatributo con el operador AND ",
+            "Selección Multiatributo con el operador OR",
+            "Seleccion Multiatributo por convolución ",
+            "Proyección Simple de Titulos",
+            "Proyección Simple de Autores",
+            "Proyección Simple por Paises",
+            "Proyección Simple por Idioma",
+            "Proyección Multiatributo Titulo y Cantidad",
+            "Proyección Multiatributo Titulo y Precio",
+            "Juntar Libros e Idiomas",
+            "Juntar Libros y Autores"});
+            this.cbOperaciones.Location = new System.Drawing.Point(293, 25);
+            this.cbOperaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbOperaciones.Name = "cbOperaciones";
-            this.cbOperaciones.Size = new System.Drawing.Size(345, 21);
+            this.cbOperaciones.Size = new System.Drawing.Size(459, 24);
             this.cbOperaciones.TabIndex = 1;
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(586, 20);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListar.Location = new System.Drawing.Point(781, 25);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(105, 21);
+            this.btnListar.Size = new System.Drawing.Size(140, 26);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -69,10 +90,9 @@
             // lblOperacion
             // 
             this.lblOperacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblOperacion.Location = new System.Drawing.Point(10, 54);
-            this.lblOperacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOperacion.Location = new System.Drawing.Point(13, 66);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(689, 154);
+            this.lblOperacion.Size = new System.Drawing.Size(919, 190);
             this.lblOperacion.TabIndex = 3;
             // 
             // dgvOperaciones
@@ -80,26 +100,26 @@
             this.dgvOperaciones.AllowUserToAddRows = false;
             this.dgvOperaciones.AllowUserToDeleteRows = false;
             this.dgvOperaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOperaciones.Location = new System.Drawing.Point(10, 220);
-            this.dgvOperaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvOperaciones.Location = new System.Drawing.Point(13, 271);
+            this.dgvOperaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvOperaciones.Name = "dgvOperaciones";
             this.dgvOperaciones.ReadOnly = true;
             this.dgvOperaciones.RowHeadersWidth = 51;
             this.dgvOperaciones.RowTemplate.Height = 24;
-            this.dgvOperaciones.Size = new System.Drawing.Size(689, 228);
+            this.dgvOperaciones.Size = new System.Drawing.Size(919, 281);
             this.dgvOperaciones.TabIndex = 4;
             // 
             // frmBaseDatosRepasoOperaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 457);
+            this.ClientSize = new System.Drawing.Size(944, 562);
             this.Controls.Add(this.dgvOperaciones);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.cbOperaciones);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBaseDatosRepasoOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
