@@ -95,9 +95,9 @@ namespace pryEstructuraDeDatos
                     
                 case 7:
                     lblOperacion.Text = cbOperaciones.Text + ": " +
-                        "Libros escritos por Gabriel García Márquez";
+                        "Libros escritos en 1842";
                     varSQL = "SELECT * FROM Libro " +
-                    "WHERE IdAutor = 8";
+                    "WHERE Año = '1842'";
                     objBaseDatos.Listar(dgvOperaciones, varSQL);
                     break;
 

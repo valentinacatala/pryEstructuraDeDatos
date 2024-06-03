@@ -57,7 +57,7 @@
             "Diferencia de Autores",
             "Intersección de Idiomas",
             "Intersección de Paises",
-            "Selección Simple de Autores",
+            "Selección Simple de Año",
             "Selección Simple de Cantidad",
             "Selección Multiatributo con el operador AND ",
             "Selección Multiatributo con el operador OR",
