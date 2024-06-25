@@ -30,6 +30,7 @@ namespace pryEstructuraDeDatos
             {
                 if (Nuevo.Codigo <= Primero.Codigo)
                 {
+
                     Nuevo.Siguiente = Primero;
                     Primero = Nuevo;
                 }
